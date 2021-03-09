@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+<node name="amcl" pkg="amcl" type="amcl">
+   <param name="initial_pose_x" value="0" />
+   <param name="initial_pose_y" value="0" />
+   <param name="initial_pose_a" value="0" />
+   <param name="use_map_topic " value="true" />
+   <param name="scan" value="/scan" />
+   <param name="tf" value="/tf" />
+</node>   
+</launch>

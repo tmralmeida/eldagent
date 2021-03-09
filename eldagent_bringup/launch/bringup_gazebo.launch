@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Launch file args -->
+    <arg name="world" default="$(find turtlebot3_gazebo)/worlds/turtlebot3_house.world"/>
+    
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world)"/>
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+</launch>

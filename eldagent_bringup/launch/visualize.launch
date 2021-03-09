@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <node type="rviz" name="rviz" pkg="rviz"
+        args="--display-config $(find eldagent_bringup)/config/visualize.rviz" required="false"/>
+</launch>
