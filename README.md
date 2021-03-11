@@ -1,13 +1,13 @@
 # eldagent
-**eldagent** is an agent for elderly care. It aims to interact with older adults in a home scenario.
-It is under construction. This repo contains the roadmap throughout this project.
+**eldagent** is a social robot for elderly care. It aims to interact with older adults in a home scenario.
+This repo is under construction, and it contains the roadmap throughout this project.
 
 # Table of Contents
 - [Pre-Requisites](#pre-requisites)
 - [Initial Steps](#initial-steps)
     * [Initial Commands](#initial-commands)
     * [SLAM and Localization commands](#slam-and-localization-commands)
-    * [Turtlebot2 workin on ROS-Noetic](#turtlebot2-working-on-ros-noetic)
+    * [Turtlebot2 working on ROS-Noetic](#turtlebot2-working-on-ros-noetic)
 
 
 
@@ -72,7 +72,7 @@ git clone https://github.com/Usama-Arshad16/turtlebot2_navigation
 ```
 2 - Unzip both directories
 
-3 - From these packages, 2 were removed: robot_pose_ekf and orocos-bayesian-filtering (Couldn't find a way of build them from source)
+3 - From these packages, two were removed: robot_pose_ekf and orocos-bayesian-filtering (couldn't find a way of build them from source)
 
 4 - Clone yocs_controllers repo.  
 
@@ -101,14 +101,13 @@ catkin_make
 roslaunch eldagent_bringup spawn_tbot2.launch
 ```
 
-9 - Try to move it on gazebo. Any SyntaxError means that the first line of the turtlebot_teleop_key.py should be python3 env. Moreover, in that same script,
-the name fo the topic should ce "/cmd_vel".
+9 - Try to move it on Gazebo. Any SyntaxError means that the first line of the turtlebot_teleop_key.py should be python3 env. Moreover, in that same script, the name of the topic should become **/cmd_vel**. The robot still doesn't move right? Go to the next step.
 
 ```
 roslaunch turtlebot_teleop keyboard_teleop.launch
 ```
 
-10 - The robot doesn't move right? We must include a differential driver on turtlebot_gazebo.xacro.urdf, such as:
+10 - We must include a differential driver on turtlebot_gazebo.xacro.urdf, such as:
 
 ```
 <gazebo>
